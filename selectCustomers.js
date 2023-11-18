@@ -2,14 +2,19 @@
 Create a node.js file that Select all records from the "customers" table, 
 and display the result object on console. 
  */
+
+/*Note: create and add table, values on sql workbench
+create table customers (id int, name varchar(20), address varchar(20));
+insert into customers (id, name, address) values (01, "a", "asdfgh");
+*/
 const mysql = require('mysql2');
 
 // Create a connection to the MySQL database
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'kingsman',
-  database: 'mcs22'
+  host: 'localhost', 
+  user: 'root',         //add user name of Mysql workbench
+  password: 'DevManus', //add password of Mysql Workbench set pass
+  database: 'mcs22'     //add main database name where you created customers table
 });
 
 // Connect to the database
